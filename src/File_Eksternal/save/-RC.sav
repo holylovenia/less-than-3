@@ -1,43 +1,47 @@
 "-RC"
-2016 11 30 20 27 42  
+2016 12 1 2 9 9  
 "-RC"
-4 80  
-100 60 50  
-5 0 0 4  
+6 95  
+120 60 50  
+120 0 0 4  
 
-0 8  
-4 1  
-3 5  
-2 2  
-7 0  
-2 9  
-6 0  
-3 4  
-2 7  
+0 1  
+1 8  
+4 4  
 8 0  
-4 6  
-5 0  
+4 9  
+1 6  
 6 0  
-3 3  
-1 10  
+5 0  
+1 3  
+4 2  
+8 0  
+6 0  
+8 0  
+3 5  
+7 0  
+2 7  
+6 0  
+2 10  
 #  
-5  
-6 9  
-8 9  
+1  
+4 5  
+5 2  
 
 
-8 3 "Urcaguary" 5 5 "Eros" 8 9 "Ellie" ;  
-4 2 "Lockheart" 8 5 "Catcine" 6 8 "Scheherazade" ;  
-7 2 "Baraqiel" 5 5 "Anahita" 2 8 "Astaroth" ;  
-5 2 "Lilim" 8 6 "Circe" 7 9 "Erin" ;  
-8 4 "Prometheus" 3 8 "Belle" ;  
-2 8 "Candy" 8 9 "Sophie" ;  
-2 3 "Layla" 6 5 "Diana" 3 8 "Polaris" ;  
-4 5 "Karen" 6 8 "Himiko" ;  
-8 3 "Amaymon" 4 6 "Qilin" 7 7 "Popuri" ;  
-7 3 "Zenobia" 9 7 "Venus" ;  
+8 3 "Lockheart" 5 5 "Catcine" 8 9 "Candy" ;  
+4 2 "Amaymon" 8 5 "Diana" 6 8 "Qilin" ;  
+7 2 "Huwawa" 5 5 "Himiko" 2 8 "Scheherazade" ;  
+5 2 "Karen" 8 6 "Erin" 7 9 "Leona" ;  
+8 4 "Asherah" 3 8 "Polaris" ;  
+2 8 "Belle" 8 9 "Zenobia" ;  
+2 3 "Baraqiel" 6 5 "Circe" 3 8 "Sophie" ;  
+4 5 "Lilim" 6 8 "Venus" ;  
+8 3 "Astaroth" 4 6 "Eros" 7 7 "Anahita" ;  
+7 3 "Ellie" 9 7 "Ursula" ;  
 #  
 
 "(1 1(2 0(4 0(6 0()())(7 0()()))())(3 0()(5 0(8 0()())(9 0()()))))" 
+"(3 1()(5 0(8 0()())(9 0()())))" 
 #  
 |

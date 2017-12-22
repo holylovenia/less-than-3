@@ -48,7 +48,7 @@ void Pause (long int miliSec)
 void InitializeColor(void)
 // I.S. : None
 // F.S. : Initiate Color Pairs
-  // Color Available
+  // Available colors
     // COLOR_BLACK
     // COLOR_RED
     // COLOR_GREEN

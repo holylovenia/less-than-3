@@ -461,7 +461,6 @@ void InputAksiPlayer (WINDOW* cmdWin, WINDOW* infoWin, Queue * Q, Player P, List
 				AddQ (Q, X);
 				if ((X == 'S') || (X == 'D'))
 				{
-					wprintw(infoWin, "%d %c\n", IsUsed, X);
 					IsUsed = 1;
 				}
 			}

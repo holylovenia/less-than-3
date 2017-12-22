@@ -1475,12 +1475,45 @@ void GameMapControl (POINT* POS_Player, addressarea P, POINTOFENEMY E[MaxMap+1])
         SaveFileIndex sFI;
         ReadSaveFileIndex (&sFI);
         if (SearchSaveFileIndex (sFI, NAMA(player)) != 0) {
-            Load(NAMA(player), &player, &nMedLeft, &con, &nCurrMap, &posP, &posB, &tabEnemy, &acquiredSkill);
+            BuildSkillTree(&skillTree,&acquiredSkill);
+
+            char* TempName = (char*) malloc (20);
+            TempName = NAMA(player);
+            Load(TempName, &player, &nMedLeft, &con, &nCurrMap, &posP, &posB, &tabEnemy, &acquiredSkill);
+
+            ListLR L = acquiredSkill;
+            BinTree B;
+            while (L != Nil) {
+                SearchID(skillTree,ID(Akar(Info(L))),&B);
+                Unlocked(Akar(B)) = true;
+                L = Next(L);
+            }
+
+            LoadBST(&enemyData);
+            CreateEmptyArea(&listArea);
+            Baca_Area(area);
+            PlaceMedicine(nMedLeft,area);
+            LoadMap(&listArea,area,con,posB);
+            SaveEnemyPoint(area,enemyLoc);
+            SetAllVisitedAreaToFalse(&FirstArea(listArea));
+            GetMapAddressFromIndex(nCurrMap,FirstArea(listArea),&currMap);
         }
         else {
             char* TempName = (char*) malloc (20);
             TempName = NAMA(player);
             CreatePlayerAwal(&player, TempName);
+
+            nMedLeft = 6;
+            BuildSkillTree(&skillTree,&acquiredSkill);
+            LoadBST(&enemyData);
+            CreateEmptyArea(&listArea);
+            Baca_Area(area);
+            PlaceMedicine(nMedLeft,area);
+            Init_List(&listArea, area, &con, &posB);
+            SaveEnemyPoint(area,enemyLoc);
+            currMap = FirstArea(listArea);
+            posP = Random_Pos_Player(Map(currMap));
+            AssignEnemy(enemyData,area,&tabEnemy);
         }
 
         if (result == -1) {

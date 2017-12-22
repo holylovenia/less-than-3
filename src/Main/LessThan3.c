@@ -45,7 +45,7 @@ int main() {
         LoadMainMenu(&MM, &Start);
 
         if (Start) {
-            //OpeningCutscene(NewPlayer(MM));
+            OpeningCutscene(NewPlayer(MM));
             if (NewPlayer(MM)) {
                 // Initialize map and enemy
                 nMedLeft = 6;

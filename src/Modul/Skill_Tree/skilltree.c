@@ -135,16 +135,12 @@ void TurnOnPassiveSkillLevel5 (WINDOW* infoWin, ListLR AS, Player *P, Enemy * E)
 			{
 				// +10% HP Player
 				HP(*P) += 0.1 * HPMAXPlayer(*P);
-				if (HP(*P) > HPMAXPlayer(*P))
-				{
-					HP(*P) += 0.1 * HPMAXPlayer(*P);
-					if (HP(*P) > HPMAXPlayer(*P)) {
-						HP(*P) = HPMAXPlayer(*P);
-					}
-					wprintw(infoWin, "%s skill activated! ", SkillLevel52);
-					wprintw(infoWin, "You have recovered some HP.\n");
-					wrefresh(infoWin);
+				if (HP(*P) > HPMAXPlayer(*P)) {
+					HP(*P) = HPMAXPlayer(*P);
 				}
+				wprintw(infoWin, "%s skill activated! ", SkillLevel52);
+				wprintw(infoWin, "You have recovered some HP.\n");
+				wrefresh(infoWin);
 			}
 		}
 }
